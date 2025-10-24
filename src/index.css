@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-main: #0b1220;
+  --color-dark-main-foreground: #e6eef6;
+  --color-dark-border: #1f2a38;
+  --color-dark-input: #0f1724;
+  --color-dark-primary: #4ea1ff;
+  --color-dark-primary-foreground: #0b1220;
+  --color-dark-secondary: #0f1724;
+  --color-dark-secondary-foreground: #d9e9ff;
+  --color-dark-muted: #0e1620;
+  --color-dark-muted-foreground: #94a3b8;
+  --color-dark-card: #0f1724;
+  --color-dark-card-foreground: #c7d6e6;
+  --color-dark-sidebar-sidebar: #12263a;
+  --color-main: #f7faff;
+  --color-main-foreground: #0b1220;
+  --color-border: #e6eef6;
+  --color-input: #ffffff;
+  --color-primary: #0f62fe;
+  --color-primary-foreground: #ffffff;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #475569;
+  --color-card: #ffffff;
+  --color-card-foreground: #0b1220;
+}
+
+* {
+  font-family: "Figtree", sans-serif;
+}
