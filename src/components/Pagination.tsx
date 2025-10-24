@@ -12,7 +12,7 @@ const Pagination = ({ page, setPage, totalPage }: PaginationProp) => {
       <button
         className="disabled:opacity-50"
         onClick={() => setPage((prev) => Number(prev - 1))}
-        disabled={page >= totalPage || page <= totalPage || totalPage <= 0}
+        disabled={page <= 1 || totalPage <= 0}
       >
         <SquareChevronLeft className="stroke-current" />
       </button>

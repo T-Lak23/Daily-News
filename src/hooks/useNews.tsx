@@ -17,14 +17,12 @@ const useNews = () => {
       setIsLoading(true);
       setError(null);
 
-      const endpoint = `${
-        import.meta.env.VITE_NEWS_API_ENDPOINT
-      }/top-headlines`;
+      const endpoint = `${import.meta.env.VITE_NEWS_ENDPOINT}/top-headlines`;
       const params = new URLSearchParams({
         page: page.toString(),
-        pageSize: pageSize.toString(),
-        apiKey: import.meta.env.VITE_NEWS_API,
-        language: "en",
+        max: pageSize.toString(),
+        apikey: import.meta.env.VITE_NEWS_API_KEY,
+        lang: "en",
       });
 
       if (search) {
@@ -39,7 +37,7 @@ const useNews = () => {
 
       console.log(response.data);
       const articles = response.data.articles || [];
-      const totalRecords = response.data.totalResults || 0;
+      const totalRecords = response.data.totalArticles || 0;
 
       setNews(articles);
       setTotalPage(Math.ceil(totalRecords / pageSize));

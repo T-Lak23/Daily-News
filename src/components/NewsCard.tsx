@@ -5,7 +5,7 @@ interface NewsProp {
   news: Article;
 }
 const NewsCard = ({ news }: NewsProp) => {
-  const { title, description, url, urlToImage, publishedAt, source } = news;
+  const { title, description, url, image, publishedAt, source } = news;
   return (
     <Link
       to={url}
@@ -13,7 +13,7 @@ const NewsCard = ({ news }: NewsProp) => {
       className="dark:bg-dark-card bg-card border dark:border-dark-border border-border rounded-xl overflow-hidden"
     >
       <img
-        src={urlToImage || "/placeholder.webp"}
+        src={image || "/placeholder.webp"}
         alt={title}
         className="h-[200px] w-full object-cover"
       />

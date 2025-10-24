@@ -2,7 +2,7 @@ export type Article = {
   title: string;
   description: string;
   url: string;
-  urlToImage?: string;
+  image?: string;
   publishedAt: string;
   source: { name: string };
 };
